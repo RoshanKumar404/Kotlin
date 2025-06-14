@@ -15,6 +15,6 @@ import androidx.compose.ui.graphics.Color
 
 //Recompostion learnigs
 @Composable
-fun triangle(name:String){
+fun Triangle(name:String){
     Text("jia sri ramm")
 }
