@@ -11,9 +11,10 @@ import androidx.activity.compose.setContent
 //import androidx.compose.runtime.Composable
 //import androidx.compose.ui.Modifier
 //import androidx.compose.ui.tooling.preview.Preview
-import com.example.learnig1.Src.learnigs.Greet
+//import com.example.learnig1.Src.learnigs.Greet
 import com.example.learnig1.ui.theme.Learnig1Theme
 import androidx.compose.ui.graphics.Color
+import com.example.learnig1.Src.StateLearnig
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,9 +24,10 @@ class MainActivity : ComponentActivity() {
 
             Learnig1Theme {
                // Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                  Greet(
-                    name="Rahul",age=23, color=Color.Gray
-                  )
+//                  Greet(
+//                    name="Rahul",age=23, color=Color.Gray
+//                  )
+                StateLearnig()
                 //}
             }
         }
