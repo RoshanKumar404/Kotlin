@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import com.example.learnig1.R
 
 @Composable
-fun LayPut(modifier: Modifier = Modifier) {
+fun LayPut() {
  Box(modifier = Modifier.fillMaxSize(),
      contentAlignment = Alignment.Center){
      Column(modifier=Modifier
@@ -41,13 +41,15 @@ fun LayPut(modifier: Modifier = Modifier) {
              Text("bhai kuchh to kr le")
          }
          Spacer(modifier=Modifier.height(18.dp))
+         Image(
+             painter = painterResource(id = R.drawable.pic),
+             contentDescription = "A lovely image"
+         )
      }
+
  }
 
-    Image(
-        painter = painterResource(id = R.drawable.pic), // NO .jpg here
-        contentDescription = "A lovely image"
-    )
+
 
  }
 @Composable

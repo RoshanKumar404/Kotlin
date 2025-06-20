@@ -14,6 +14,8 @@ import androidx.activity.compose.setContent
 //import com.example.learnig1.Src.learnigs.Greet
 import com.example.learnig1.ui.theme.Learnig1Theme
 import androidx.compose.ui.graphics.Color
+import com.example.learnig1.Src.LayPut
+import com.example.learnig1.Src.LayPutPreview
 import com.example.learnig1.Src.StateLearnig
 
 class MainActivity : ComponentActivity() {
@@ -28,6 +30,7 @@ class MainActivity : ComponentActivity() {
 //                    name="Rahul",age=23, color=Color.Gray
 //                  )
                 StateLearnig()
+                LayPut()
                 //}
             }
         }
