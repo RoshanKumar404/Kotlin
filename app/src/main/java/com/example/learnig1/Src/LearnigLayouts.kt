@@ -9,12 +9,14 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 //import androidx.compose.ui.input.pointer.motionEventSpy
@@ -22,6 +24,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.learnig1.R
+import kotlin.math.round
 
 @Composable
 fun LayPut() {
@@ -43,7 +46,12 @@ fun LayPut() {
          Spacer(modifier=Modifier.height(18.dp))
          Image(
              painter = painterResource(id = R.drawable.pic),
-             contentDescription = "A lovely image"
+             contentDescription = "A lovely image",
+             modifier = Modifier
+                 .border(width = 4.dp, color = Color.Cyan, shape = RoundedCornerShape(12.dp))
+                // .size(200.dp)
+                 .clip(RoundedCornerShape(12.dp))
+
          )
      }
 
