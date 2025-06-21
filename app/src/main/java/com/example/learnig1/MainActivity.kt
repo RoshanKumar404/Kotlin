@@ -3,6 +3,7 @@ package com.example.learnig1
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 //import androidx.activity.enableEdgeToEdge
 //import androidx.compose.foundation.layout.fillMaxSize
 //import androidx.compose.foundation.layout.padding
@@ -13,7 +14,8 @@ import androidx.activity.compose.setContent
 //import androidx.compose.ui.tooling.preview.Preview
 //import com.example.learnig1.Src.learnigs.Greet
 import com.example.learnig1.ui.theme.Learnig1Theme
-import androidx.compose.ui.graphics.Color
+//import androidx.compose.ui.graphics.Color
+import com.example.learnig1.Src.Dynamic
 import com.example.learnig1.Src.LayPut
 import com.example.learnig1.Src.LayPutPreview
 import com.example.learnig1.Src.StateLearnig
@@ -29,8 +31,14 @@ class MainActivity : ComponentActivity() {
 //                  Greet(
 //                    name="Rahul",age=23, color=Color.Gray
 //                  )
-                StateLearnig()
-                LayPut()
+
+                Column {
+                    StateLearnig()
+                    Dynamic()
+                    LayPut()
+
+                }
+
                 //}
             }
         }
