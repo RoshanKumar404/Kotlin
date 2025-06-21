@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 //import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 //import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -22,6 +23,21 @@ import androidx.compose.ui.unit.dp
 //@Preview()
 fun Dynamic() {
     //Lazy column
+    LazyRow {
+        items(count = 15){index->
+            Text("jai sri ram roshan $index", modifier = Modifier
+                .padding(10.dp)
+                .height(25.dp)
+                .background(color = Color.White)
+                .border(
+                    width = 4.dp,
+                    brush =Brush.linearGradient(colors = listOf(Color.Cyan,Color.Magenta,Color.Red),
+                    ),
+                    shape=RoundedCornerShape(4.dp)
+
+                ))
+        }
+    }
     LazyColumn {
         items(count = 100){index->
             Text("Roshan is very good boy $index", modifier = Modifier
@@ -50,7 +66,7 @@ fun Dynamic() {
     }
 }
 
-@Composable
-fun prev(modifier: Modifier){
-    Dynamic()
-}
+//@Composable
+//fun prev(modifier: Modifier){
+//    Dynamic()
+//}
