@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 //import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
@@ -27,7 +28,7 @@ fun State() {
 
     Row(
         horizontalArrangement = Arrangement.Center, modifier = Modifier.padding(horizontal = 10.dp) ){
-        var count by remember {
+        var count by rememberSaveable  {
             mutableIntStateOf(0)
 
         }
