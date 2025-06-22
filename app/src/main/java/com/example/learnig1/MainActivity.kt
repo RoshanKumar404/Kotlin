@@ -18,6 +18,7 @@ import com.example.learnig1.ui.theme.Learnig1Theme
 import com.example.learnig1.Src.Dynamic
 import com.example.learnig1.Src.LayPut
 import com.example.learnig1.Src.LayPutPreview
+import com.example.learnig1.Src.State
 import com.example.learnig1.Src.StateLearnig
 
 class MainActivity : ComponentActivity() {
@@ -34,6 +35,7 @@ class MainActivity : ComponentActivity() {
 
                 Column {
                     StateLearnig()
+                    State()
                     Dynamic()
                     LayPut()
 
