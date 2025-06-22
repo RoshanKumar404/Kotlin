@@ -15,7 +15,7 @@ fun StateHosting(text:String,onTextChange:(String)->Unit) {
     TextField(
         value = text,
         onValueChange = onTextChange,
-        label = { Text("enter your things") }
+        label = { Text("enter your things buddy") }
     )
 }
 
