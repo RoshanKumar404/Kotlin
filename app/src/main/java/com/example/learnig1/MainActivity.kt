@@ -4,6 +4,12 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 //import androidx.activity.enableEdgeToEdge
 //import androidx.compose.foundation.layout.fillMaxSize
 //import androidx.compose.foundation.layout.padding
@@ -18,6 +24,7 @@ import com.example.learnig1.ui.theme.Learnig1Theme
 import com.example.learnig1.Src.Dynamic
 import com.example.learnig1.Src.LayPut
 import com.example.learnig1.Src.LayPutPreview
+import com.example.learnig1.Src.ParentCompose
 import com.example.learnig1.Src.State
 import com.example.learnig1.Src.StateLearnig
 
@@ -32,9 +39,10 @@ class MainActivity : ComponentActivity() {
 //                  Greet(
 //                    name="Rahul",age=23, color=Color.Gray
 //                  )
-
+               // val scroll= rememberScrollState()
                 Column {
                     StateLearnig()
+                    ParentCompose()
                     State()
                     Dynamic()
                     LayPut()
