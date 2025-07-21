@@ -46,3 +46,19 @@
 //        else->"fs"
 //    }
 //}
+
+class SmartDevice{
+    // its empty
+    fun turnOn(){
+        println("Your device is turned on")
+    }
+    fun TurnOff(){
+        println("your device is turned off")
+    }
+}
+
+fun main(){
+    val ClassTrial= SmartDevice()
+    ClassTrial.turnOn()
+    ClassTrial.TurnOff()
+}
