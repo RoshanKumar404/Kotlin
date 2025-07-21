@@ -49,6 +49,9 @@
 
 class SmartDevice{
     // its empty
+    val name: String="Rohaniya"
+    val categoryy: String="Genius"
+    val ConectionStatuts: String="Online"
     fun turnOn(){
         println("Your device is turned on")
     }
@@ -59,6 +62,7 @@ class SmartDevice{
 
 fun main(){
     val ClassTrial= SmartDevice()
+    println("the device name is : ${ClassTrial.name}")
     ClassTrial.turnOn()
     ClassTrial.TurnOff()
 }
