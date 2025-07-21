@@ -64,5 +64,6 @@ fun main(){
     val ClassTrial= SmartDevice()
     println("the device name is : ${ClassTrial.name}")
     ClassTrial.turnOn()
+
     ClassTrial.TurnOff()
 }
