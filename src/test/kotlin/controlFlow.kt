@@ -33,16 +33,16 @@
 
 // doning when  base same as case based
 
-fun main()
-{
-    print("chal bhai number dalll")
-    val marks =readln().toInt()
-//    val grade: String = when (marks) {
-//        in 89..99 -> "rw"   // ✅ This is a String
-//        else -> "d"         // ✅ This is also a String
+//fun main()
+//{
+//    print("chal bhai number dalll")
+//    val marks =readln().toInt()
+////    val grade: String = when (marks) {
+////        in 89..99 -> "rw"   // ✅ This is a String
+////        else -> "d"         // ✅ This is also a String
+////    }
+//    val grade :String= when (marks){
+//       in 78..89->"hd"
+//        else->"fs"
 //    }
-    val grade :String= when (marks){
-       in 78..89->"hd"
-        else->"fs"
-    }
-}
+//}
