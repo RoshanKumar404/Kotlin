@@ -76,14 +76,90 @@
 //
 //}
  // and this is constrctor with parameter
-class  Smart(val name: String, val categor: String){
-    var deviceStatus= "online"
+//class  Smart(val Devicename: String, val categor: String){
+//    var deviceStatus= "online"
+//
+//   constructor( name:String,status: Int, categor: String):this(name,categor){
+//       deviceStatus=when(status){
+//           0->"offline"
+//           1->"online"
+//           else -> "unknown"
+//       }
+//   }
+////
+//}
+open class  SmartDevice(val name: String,val category: String){
+}
+class SmartTvDevice(deviceName: String, deviceCategory: String) :
+    SmartDevice(name = deviceName, category = deviceCategory) {
+    fun turnOn(){
+        println("Your device is turned on")
+    }
+    fun TurnOff(){
+        println("your device is turned off")
+    }
+    var speakerVolume = 2
+        set(value) {
+            if (value in 0..100) {
+                field = value
+            }
+        }
+    var channelNumber=1
+        set(value){
+            if (value in 0..200){
+                field=value
+            }
+        }
+    fun increaseSpkrvolume(){
+        speakerVolume++
+        println("Volume increased to $speakerVolume")
 
-   constructor( name:String,status: Int, categor: String):this(name,categor){
-       deviceStatus=when(status){
-           0->"offline"
-           1->"online"
-           else -> "unknown"
-       }
-   }
+    }
+    fun nextChannel(){
+        channelNumber++
+        println("channel number increased to $channelNumber")
+    }
+}
+
+class  SmartLightDevice(deviceName: String, deviceCategory:String):
+        SmartDevice(name=deviceName, category = deviceCategory){
+            var brightness=0
+                set(value) {
+                    if (value in 0..100){
+                        field=value
+                    }
+                }
+
+    fun increaseBrightness(){
+        brightness++
+        println("Brightness increased to $brightness")
+    }
+        }
+
+
+class SmartHome(val smartTvDevice: SmartTvDevice,val smartLightDevice: SmartLightDevice){
+    fun turnOnTv(){
+        smartTvDevice.turnOn()
+    }
+    fun turnOffTv(){
+        smartTvDevice.TurnOff()
+    }
+    fun increaseTvvolume(){
+        smartTvDevice.increaseSpkrvolume()
+    }
+    fun changeChannel(){
+        smartTvDevice.nextChannel()
+    }
+    fun turnOnLight(){
+        smartTvDevice.turnOn()
+    }fun turnOfLight(){
+        smartTvDevice.TurnOff()
+    }
+    fun increaseLightBrightness() {
+       smartLightDevice.increaseBrightness()
+    }
+    fun turnOffAllDevices(){
+        turnOffTv()
+        turnOfLight()
+    }
 }
