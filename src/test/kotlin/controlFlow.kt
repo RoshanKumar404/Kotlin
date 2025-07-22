@@ -1,4 +1,4 @@
-//fun main() {
+//fun .main() {
 //    print("Enter the Total number")
 //    val TotalNumber: Int = readln().toInt()
 //    if (TotalNumber >= 80)
@@ -13,7 +13,7 @@
 
 // we can use range based too
 
-//fun main (){
+//fun .main (){
 //    print("enter the number plz")
 //    val nu:Int= readln().toInt()
 //
@@ -33,7 +33,7 @@
 
 // doning when  base same as case based
 
-//fun main()
+//fun .main()
 //{
 //    print("chal bhai number dalll")
 //    val marks =readln().toInt()
@@ -47,7 +47,7 @@
 //    }
 //}
 
-//class SmartDevice{
+//class .SmartDevice{
 //    // its empty
 //    val name: String="Rohaniya"
 //    val categoryy: String="Genius"
@@ -60,8 +60,8 @@
 //    }
 //}
 //
-//fun main(){
-//    val ClassTrial= SmartDevice()
+//fun .main(){
+//    val ClassTrial= .SmartDevice()
 //    println("the device name is : ${ClassTrial.name}")
 //    ClassTrial.turnOn()
 //
@@ -72,7 +72,7 @@
 // the primaty goal of constructoe is to specify hoe the object off the clss aare crearted
 
 // this is constructor wihtout parameters
-//class SmartDevice constructor(){
+//class .SmartDevice constructor(){
 //
 //}
  // and this is constrctor with parameter
@@ -89,6 +89,14 @@
 ////
 //}
 open class  SmartDevice(val name: String,val category: String){
+    var deviceStatus= "online"
+    open fun turnOn() {
+        // function body
+    }
+
+    open fun turnOff() {
+        // function body
+    }
 }
 class SmartTvDevice(deviceName: String, deviceCategory: String) :
     SmartDevice(name = deviceName, category = deviceCategory) {
@@ -134,6 +142,8 @@ class  SmartLightDevice(deviceName: String, deviceCategory:String):
         brightness++
         println("Brightness increased to $brightness")
     }
+
+
         }
 
 
