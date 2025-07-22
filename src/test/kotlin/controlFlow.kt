@@ -47,23 +47,43 @@
 //    }
 //}
 
-class SmartDevice{
-    // its empty
-    val name: String="Rohaniya"
-    val categoryy: String="Genius"
-    val ConectionStatuts: String="Online"
-    fun turnOn(){
-        println("Your device is turned on")
-    }
-    fun TurnOff(){
-        println("your device is turned off")
-    }
-}
+//class SmartDevice{
+//    // its empty
+//    val name: String="Rohaniya"
+//    val categoryy: String="Genius"
+//    val ConectionStatuts: String="Online"
+//    fun turnOn(){
+//        println("Your device is turned on")
+//    }
+//    fun TurnOff(){
+//        println("your device is turned off")
+//    }
+//}
+//
+//fun main(){
+//    val ClassTrial= SmartDevice()
+//    println("the device name is : ${ClassTrial.name}")
+//    ClassTrial.turnOn()
+//
+//    ClassTrial.TurnOff()
+//}
 
-fun main(){
-    val ClassTrial= SmartDevice()
-    println("the device name is : ${ClassTrial.name}")
-    ClassTrial.turnOn()
+// now we will learn constructor
+// the primaty goal of constructoe is to specify hoe the object off the clss aare crearted
 
-    ClassTrial.TurnOff()
+// this is constructor wihtout parameters
+//class SmartDevice constructor(){
+//
+//}
+ // and this is constrctor with parameter
+class  Smart(val name: String, val categor: String){
+    var deviceStatus= "online"
+
+   constructor( name:String,status: Int, categor: String):this(name,categor){
+       deviceStatus=when(status){
+           0->"offline"
+           1->"online"
+           else -> "unknown"
+       }
+   }
 }
