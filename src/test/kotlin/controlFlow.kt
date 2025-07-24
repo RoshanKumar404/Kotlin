@@ -100,9 +100,9 @@ open class  SmartDevice(val name: String,val category: String){
 }
 class SmartTvDevice(deviceName: String, deviceCategory: String) :
     SmartDevice(name = deviceName, category = deviceCategory) {
-    fun turnOn(){
-        println("Your device is turned on")
-    }
+   // fun turnOn(){
+//        println("Your device is turned on")
+//    }
     fun TurnOff(){
         println("your device is turned off")
     }
