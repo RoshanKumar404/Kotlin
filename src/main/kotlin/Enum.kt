@@ -22,9 +22,16 @@ class LearningCompanionClass{
 }
 val LearningCompanionClass.StudentProgress.progressText: String
     get()="$Asnwered of $total answered"
-fun main() {
+fun LearningCompanionClass.StudentProgress.PrintProgressBar(){
+    repeat(LearningCompanionClass.Asnwered){print("▓")}
+    repeat(LearningCompanionClass.total-LearningCompanionClass.Asnwered){print("▒")}
+    println()
+    println(LearningCompanionClass.progressText)
+}
 
+fun main() {
+LearningCompanionClass.PrintProgressBar()
     //println(question3.toString())
     //println("${LearningCompanionClass.Asnwered} of ${LearningCompanionClass.total} answere.")
-    println(LearningCompanionClass.progressText)
+   // println(LearningCompanionClass.progressText)
 }
